@@ -1,5 +1,5 @@
 [package]
-name = "rusty-hero"
+name = "bindings"
 version = "0.1.0"
 authors = ["Andreas Rånman <rondreas@users.noreply.github.com>"]
 edition = "2018"
@@ -8,4 +8,6 @@ edition = "2018"
 
 [dependencies]
 windows = "0.2.1"
-bindings = { path = "bindings" }
+
+[build-dependencies]
+windows = "0.2.1"

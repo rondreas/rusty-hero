@@ -3,9 +3,6 @@
  * windows ported their api to rust.
  */
 
-mod bindings {
-    ::windows::include_bindings!();
-}
 
 use bindings::{
     windows::win32::system_services::{MB_OK, MB_ICONINFORMATION},
