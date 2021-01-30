@@ -8,7 +8,7 @@ fn main() {
             WS_OVERLAPPEDWINDOW, WS_VISIBLE,    // window styles,
             LRESULT,                            // signed result of message processing,
             WM_SIZE, WM_DESTROY, WM_CLOSE,      // enums for window notifications,
-            WM_ACTIVATEAPP
+            WM_ACTIVATEAPP, WM_PAINT,
         }
         windows::win32::windows_and_messaging::{
             HWND, WNDCLASSA,                    // handle for window and window class,
@@ -17,7 +17,12 @@ fn main() {
             RegisterClassA,
             CreateWindowExA,
             MSG, GetMessageA, DispatchMessageA, // Messsage loop for our window,
-            DestroyWindow, PostQuitMessage
+            DestroyWindow, PostQuitMessage,
+        }
+        windows::win32::gdi::{
+            HDC, PAINTSTRUCT,
+            BeginPaint, EndPaint, 
+            PatBlt,
         }
     );
 }
